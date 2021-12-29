@@ -30,13 +30,13 @@ st.bar_chart(hist_values)
 
 with user_input:
     st.sidebar.header('Parameter') 
-    if st.sidebar.checkbox('Show raw data'):
+    if st.sidebar.checkbox('Show raw DATA'):
         st.subheader('Raw data')
         st.write(data)
 
 
     # Some number in the range 0-23
-    hour_to_filter = st.sidebar.slider('hour', 0, 23, 17)
+    hour_to_filter = st.sidebar.slider('hour', 0, 23, 9)
     filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 
 st.subheader('Map of all pickups at %s:00' % hour_to_filter)
